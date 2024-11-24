@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Meal Cost Calculator</h2>
+        <p class="instructions">*** You can add rows to input values in Name, Number of meals per person, Deposit per person. Click on- "Calculate" to proceed. You can make comments and add new columns too.***</p>       
+        <div class="table-container">
+            <table id="mealTable">
+                <thead>
+                    <tr>
+                        <th>Serial</th>
+                        <th>Name</th>
+                        <th>Number of meals per person</th>
+                        <th>Deposit per person</th>
+                        <th>Cost per person</th>
+                        <th>Will get</th>
+                        <th>Will give</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true" class="meals"></td>
+                        <td contenteditable="true" class="deposit"></td>
+                        <td class="cost"></td>
+                        <td class="will-get"></td>
+                        <td class="will-give"></td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <button id="addRow">Add Row</button>
+        <button id="addColumn">Add Column</button>
+        <button id="calculate">Calculate</button>
+
+        <div class="totals">
+            <pre>( Total number of meals: <span id="totalMeals">0</span> )    ( Total deposits: <span id="totalDeposits">0</span> )    ( Per meal cost: <span id="perMealCost">0</span> )</pre>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
